@@ -14,20 +14,12 @@ class Formatter {
     const array = string.split(' ')
     // check if there are any articles
     for(let i = 0; i < array.length; i++){
-      if (i === 0){
+      if (i === 0 || !articles.includes(array[i])){
         newA.push(this.capitalize(array[i]))
       } else {
-        articles.find(a => console.log(a))
-      //   if (articles.includes(array[i]) ) {
-      //     newA.push(array[i])
-      //   } else {
-      //     newA.push(this.capitalize(array[i]))
-      //   }
-      // }
+        newA.push(array[i])
+      }
     }
-    return newA.join(' ')
-    
-    
-  
+    return newA.join(' ') 
   }
 }
