@@ -17,13 +17,13 @@ class Formatter {
       if (i === 0){
         newA.push(this.capitalize(array[i]))
       } else {
-        if (articles.includes(array[i]) ) {
-          newA.push(array[i])
-        } else {
-          newA.push(this.capitalize(array[i]))
-        }
-      
-      }
+        articles.find(a => console.log(a))
+      //   if (articles.includes(array[i]) ) {
+      //     newA.push(array[i])
+      //   } else {
+      //     newA.push(this.capitalize(array[i]))
+      //   }
+      // }
     }
     return newA.join(' ')
     
